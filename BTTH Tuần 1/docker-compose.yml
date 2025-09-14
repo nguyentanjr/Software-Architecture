@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  ubuntu-vnc:
+    build: .
+    container_name: ubuntu-vnc-desktop
+    ports:
+      - "5901:5901"  # VNC
+      - "2222:22"    # SSH
+    stdin_open: true
+    tty: true
